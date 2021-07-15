@@ -1,0 +1,313 @@
+<html>
+<head>
+    <h2>AWT-Abstract Window Toolkit</h2>
+    <p>
+    Java AWT is an API to develop GUI or window-based applications in java.<br>
+    Java AWT components are platform-dependent.<br>
+    AWT is heavyweight i.e. its components are using the resources of OS.<br>
+    The java.awt package provides classes for AWT api such as<br>
+    ->TextField<br>
+    ->Labe<br>
+    ->TextArea<br>
+    ->RadioButton<br>
+    ->CheckBox<br>
+    ->Choice<br>
+    ->List etc.<br>
+    <h3>Java AWT Hierarchy</h3>
+    The hierarchy of Java AWT classes are given below.<br>
+    <img src="file:///android_res/drawable/awthierarchy.jpg" border="2"/><br>
+    <b>Container</b><br>
+    ->The Container is a component in AWT that can contain another components like buttons, textfields, labels etc. <br>
+    ->The classes that extends Container class are known as container such as Frame, Dialog and Panel.<br>
+    <b>Window</b><br>
+    ->The window is the container that have no borders and menu bars.<br>
+    ->You must use frame, dialog or another window for creating a window.<br>
+    <b>Panel</b><br>
+    ->The Panel is the container that doesn't contain title bar and menu bars.<br>
+    ->It can have other components like button, textfield etc.<br>
+    <b>Frame</b><br>
+    ->The Frame is the container that contain title bar and can have menu bars.<br>
+    ->It can have other components like button, textfield etc.<br>
+    <b>Useful Methods of Component class</b><br>
+    <table border="2">
+        <tbody><tr><th>Method</th><th>Description</th></tr>
+        <tr><td>public void add(Component c)</td><td>inserts a component on this component.</td></tr>
+        <tr><td>public void setSize(int width,int height)</td><td>sets the size (width and height) of the component.</td></tr>
+        <tr><td>public void setLayout(LayoutManager m)</td><td>defines the layout manager for the component.</td></tr>
+        <tr><td>public void setVisible(boolean status)</td><td>changes the visibility of the component, by default false.</td></tr>
+        </tbody>
+    </table>
+    <h3>Java AWT Example</h3>
+    ->To create simple awt example, you need a frame.<br>
+    ->There are two ways to create a frame in AWT.<br>
+    1.By extending Frame class (inheritance)<br>
+    2.By creating the object of Frame class (association)<br>
+    <b>1.By extending Frame class</b><br>
+    <code>
+    import java.awt.*;<br>
+    class First extends Frame{<br>
+    First(){<br>
+    Button b=new Button("click me");<br>
+    b.setBounds(30,100,80,30);// setting button position<br>
+    add(b);//adding button into frame<br>
+    setSize(300,300);//frame size 300 width and 300 height<br>
+    setLayout(null);//no layout manager<br>
+    setVisible(true);//now frame will be visible, by default not visible<br>
+    }<br>
+    public static void main(String args[]){<br>
+    First f=new First();<br>
+    }<br>
+    }<br>
+        Output-;<br>
+        <img src="file:///android_res/drawable/awtfirst.jpeg"\ border="2">
+    </code>
+    <b>2.By creating the object of Frame class</b><br>
+    <code>
+    import java.awt.*;<br>
+    class First2{<br>
+    First2(){<br>
+    Frame f=new Frame();<br>
+    Button b=new Button("click me");<br>
+    b.setBounds(30,50,80,30);<br>
+    f.add(b);<br>
+    f.setSize(300,300);<br>
+    f.setLayout(null);<br>
+    f.setVisible(true);<br>
+    }<br>
+    public static void main(String args[]){<br>
+    First2 f=new First2();<br>
+    }<br>
+    }<br>
+    </code>
+    <h3>Java AWT Button</h3>
+    ->The button class is used to create a labeled button that has platform independent implementation. <br>
+    ->The application result in some action when the button is pushed.<br>
+    <b>AWT Button Class declaration</b><br>
+    public class Button extends Component implements Accessible<br>
+    <b>Java AWT Button Example</b><br>
+    <code>
+    import java.awt.*;<br>
+    public class ButtonExample {<br>
+    public static void main(String[] args) {<br>
+    Frame f=new Frame("Button Example");<br>
+    Button b=new Button("Click Here");<br>
+    b.setBounds(50,100,80,30);<br>
+    f.add(b);<br>
+    f.setSize(400,400);<br>
+    f.setLayout(null);<br>
+    f.setVisible(true);<br>
+    }<br>
+    }<br>
+    Output:<br>
+    <img src="file:///android_res/drawable/button1.jpg"/>
+    </code>
+    <h3>Java AWT Label</h3>
+    ->The object of Label class is a component for placing text in a container.<br>
+    ->It is used to display a single line of read only text.<br>
+    The text can be changed by an application but a user cannot edit it directly.<br>
+    <b>AWT Label Class Declaration</b><br>
+    ->public class Label extends Component implements Accessible<br>
+    <b>Java Label Example</b><br>
+    <code>
+    import java.awt.*;<br>
+    class LabelExample{<br>
+    public static void main(String args[]){<br>
+    Frame f= new Frame("Label Example");<br>
+    Label l1,l2;<br>
+    l1=new Label("First Label.");<br>
+    l1.setBounds(50,100, 100,30);<br>
+    l2=new Label("Second Label.");<br>
+    l2.setBounds(50,150, 100,30);<br>
+    f.add(l1); f.add(l2);<br>
+    f.setSize(400,400);<br>
+    f.setLayout(null);<br>
+    f.setVisible(true);<br>
+    }<br>
+    }<br>
+    Output:<br>
+        <img src="file:///android_res/drawable/label1.jpg"/>
+    </code>
+    <h3>Java AWT Checkbox</h3>
+    ->The Checkbox class is used to create a checkbox.<br>
+    ->It is used to turn an option on (true) or off (false).<br>
+    <b>AWT Checkbox Class Declaration</b><br>
+    ->public class Checkbox extends Component implements ItemSelectable, Accessible<br>
+    <b>Java AWT Checkbox Example</b><br>
+    <code>
+    import java.awt.*;<br>
+    public class CheckboxExample<br>
+    {<br>
+    CheckboxExample(){<br>
+    Frame f= new Frame("Checkbox Example");<br>
+    Checkbox checkbox1 = new Checkbox("C++");<br>
+    checkbox1.setBounds(100,100, 50,50);<br>
+    Checkbox checkbox2 = new Checkbox("Java", true);<br>
+    checkbox2.setBounds(100,150, 50,50);<br>
+    f.add(checkbox1);<br>
+    f.add(checkbox2);<br>
+    f.setSize(400,400);<br>
+    f.setLayout(null);<br>
+    f.setVisible(true);<br>
+    }<br>
+    public static void main(String args[])<br>
+    {<br>
+    new CheckboxExample();<br>
+    }<br>
+    }<br>
+    Output:<br>
+        <img src="file:///android_res/drawable/checkbox1.jpg"/>
+    </code>
+    <h3>AWT Radio Button or Checkbox Group</h3>
+    ->The object of CheckboxGroup class is used to group together a set of Checkbox.<br>
+    ->At a time only one check box button is allowed to be in "on" state and remaining check box button in "off" state.<br>
+    ->It inherits the object class.<br>
+    <b>AWT CheckboxGroup Class Declaration:</b><br>
+    ->public class CheckboxGroup extends Object implements Serializable<br>
+    <b>Java AWT CheckboxGroup Example</b><br>
+    <code>
+    import java.awt.*;<br>
+    public class CheckboxGroupExample<br>
+    {<br>
+    CheckboxGroupExample(){<br>
+    Frame f= new Frame("CheckboxGroup Example");<br>
+    CheckboxGroup cbg = new CheckboxGroup();<br>
+    Checkbox checkBox1 = new Checkbox("C++", cbg, false);<br>
+    checkBox1.setBounds(100,100, 50,50);<br>
+    Checkbox checkBox2 = new Checkbox("Java", cbg, true);<br>
+    checkBox2.setBounds(100,150, 50,50);<br>
+    f.add(checkBox1);<br>
+    f.add(checkBox2);<br>
+    f.setSize(400,400);<br>
+    f.setLayout(null);<br>
+    f.setVisible(true);<br>
+    }<br>
+    public static void main(String args[])<br>
+    {<br>
+    new CheckboxGroupExample();<br>
+    }<br>
+    }<br>
+    Output:<br>
+        <img src="file:///android_res/drawable/checkboxgroup1.jpg"/>
+    </code>
+    <h3>Java AWT List</h3>
+    ->The object of List class represents a list of text items.<br>
+    ->By the help of list, user can choose either one item or multiple items.<br>
+    ->It inherits Component class.<br>
+    <b>AWT List class Declaration</b><br>
+    ->public class List extends Component implements ItemSelectable, Accessible<br>
+    <b>Java AWT List Example</b><br>
+    <code>
+    import java.awt.*;<br>
+    public class ListExample<br>
+    {<br>
+    ListExample(){<br>
+    Frame f= new Frame();<br>
+    List l1=new List(5);<br>
+    l1.setBounds(100,100, 75,75);<br>
+    l1.add("Item 1");<br>
+    l1.add("Item 2");<br>
+    l1.add("Item 3");<br>
+    l1.add("Item 4");<br>
+    l1.add("Item 5");<br>
+    f.add(l1);<br>
+    f.setSize(400,400);<br>
+    f.setLayout(null);<br>
+    f.setVisible(true);<br>
+    }<br>
+    public static void main(String args[])<br>
+    {<br>
+    new ListExample();<br>
+    }<br>
+    }<br>
+    Output:<br>
+    <img src="file:///android_res/drawable/list1.jpg"/>
+    </code>
+    <h3>Java AWT choicebox</h3>
+    ->The object of Choice class is used to show popup menu of choices.<br>
+    ->Choice selected by user is shown on the top of a menu.<br>
+    ->It inherits Component class.<br>
+    <b>AWT Choice Class Declaration:</b><br>
+    ->public class Choice extends Component implements ItemSelectable, Accessible<br>
+    <b>Java AWT Choice Example:</b><br>
+    <code>
+    import java.awt.*;<br>
+    public class ChoiceExample<br>
+    {<br>
+    ChoiceExample(){<br>
+    Frame f= new Frame();<br>
+    Choice c=new Choice();<br>
+    c.setBounds(100,100, 75,75);<br>
+    c.add("Item 1");<br>
+    c.add("Item 2");<br>
+    c.add("Item 3");<br>
+    c.add("Item 4");<br>
+    c.add("Item 5");<br>
+    f.add(c);<br>
+    f.setSize(400,400);<br>
+    f.setLayout(null);<br>
+    f.setVisible(true);<br>
+    }<br>
+    public static void main(String args[])<br>
+    {<br>
+    new ChoiceExample();<br>
+    }<br>
+    }<br>
+    Output:<br>
+    <img src="file:///android_res/drawable/choice1.jpg"/>
+    </code>
+    <h3>Java AWT TextField</h3>
+    ->The object of a TextField class is a text component that allows the editing of a single line text.<br>
+    ->It inherits TextComponent class.<br>
+    <b>AWT TextField Class Declaration:</b><br>
+    ->public class TextField extends TextComponent<br>
+    <b>Java AWT TextField Example:</b><br>
+    <code>
+    import java.awt.*;<br>
+    class TextFieldExample{<br>
+    public static void main(String args[]){<br>
+    Frame f= new Frame("TextField Example");<br>
+    TextField t1,t2;<br>
+    t1=new TextField("Welcome to Javatpoint.");<br>
+    t1.setBounds(50,100, 200,30);<br>
+    t2=new TextField("AWT Tutorial");<br>
+    t2.setBounds(50,150, 200,30);<br>
+    f.add(t1); f.add(t2);<br>
+    f.setSize(400,400);<br>
+    f.setLayout(null);<br>
+    f.setVisible(true);<br>
+    }<br>
+    }<br>
+    Output:<br>
+        <img src="file:///android_res/drawable/textfield1.jpg"/>
+    </code>
+    <b>Java AWT Text Area</b>
+    ->The object of a TextArea class is a multi line region that displays text.<br>
+    ->It allows the editing of multiple line text.<br>
+    ->It inherits TextComponent class.<br>
+    <b>AWT TextArea Class Declaration:</b><br>
+    ->public class TextArea extends TextComponent<br>
+    <b>Java AWT TextArea Example:</b><br>
+    <code>
+    import java.awt.*;<br>
+    public class TextAreaExample<br>
+    {<br>
+    TextAreaExample(){<br>
+    Frame f= new Frame();<br>
+    TextArea area=new TextArea("Welcome to javatpoint");<br>
+    area.setBounds(10,30, 300,300);<br>
+    f.add(area);<br>
+    f.setSize(400,400);<br>
+    f.setLayout(null);<br>
+    f.setVisible(true);<br>
+    }<br>
+    public static void main(String args[])<br>
+    {<br>
+    new TextAreaExample();<br>
+    }<br>
+    }<br>
+        Output:<br>
+        <img src="file:///android_res/drawable/textarea1.jpg"/>
+    </code>
+    </p>
+</head>
+</html>

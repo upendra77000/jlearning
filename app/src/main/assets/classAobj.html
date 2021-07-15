@@ -1,0 +1,261 @@
+<html>
+<body>
+<b>
+<h1>Classes and Objects</h1>
+<h2>Classes</h2>
+<li> A class is a group of objects which have common properties.</li>
+<li>It is a template or blueprint from which objects are created.</li>
+<li> It is a logical entity. It cannot be physical.</li>
+<h3>A class in Java can contain:</h3>
+<li> Fields</li>
+<li>Methods</li>
+<li>Constructors</li>
+<li>Blocks</li>
+<li>Nested class and interface</li>
+<h2>Syntax to declare a class:</h2>
+<p> class [class_name]{  </p>
+<p>   field; </p>
+<p>   method;  </p>
+<p> }  </p>
+
+<h2>Objects</h2>
+<li> An object in Java is the physical as well as a logical entity.</li>
+<li> An object is an instance of a class.</li>
+<li> An entity that has state and behavior is known as an object.</li>
+<li> e.g., chair, bike, marker, pen, table, car, etc.</li>
+
+<h3>An object has three characteristics:</h3>
+
+<li> State: represents the data (value) of an object.</li>
+<li> Behavior: represents the behavior (functionality) of an object such as deposit, withdraw, etc.</li>
+<li>Identity: An object identity is typically implemented via a unique ID.</li>
+<li> For Example, Pen is an object. Its name is Reynolds; color is white, known as its state. It is used to write, so writing is its behavior.</li>
+
+<h2>Creating an Object</h2>
+<li> In Java, the new keyword is used to create new objects.</li>
+
+<h3>There are three steps when creating an object from a class:</h3>
+<ol>
+<li> Declaration: A variable declaration with a variable name with an object type.</li>
+<li>Instantiation: The "new" keyword is used to create the object.</li>
+<li> Initialization − The "new" keyword is followed by a call to a constructor. This call initializes the new object.</li>
+</ol>
+
+<h2>Syntax to declare an Object:</h2>
+<p> class_name object_name = new class_name();</p>
+<p> Eg:</p>
+<p> class student {</p>
+<p> int id;</p>
+<p> String name;</p>
+<p> }</p>
+<p> class teststudent {</p>
+<p> public static void main(String args[]) {</p>
+<p> student s = new student();</p>
+<p> s.id=100;</p>
+<p> s.name="xyz";</p>
+<p> System.out.println(s.id);</p>
+<p> System.out.println(s.name);</p>
+<p> }</p>
+<p> }</p>
+<p> Output:</p>
+<p> 100</p>
+<p> xyz</p>
+</b>
+    <p>
+    <h3>Method in Java</h3>
+        ->A method is a block of code or collection of statements or a set of code grouped together to perform a certain task or operation.<br>
+        ->It is used to achieve the reusability of code.<br>
+        ->It also provides the easy modification and readability of code.<br>
+        ->The method is executed only when we call or invoke it.<br>
+        ->The most important method in Java is the "main()" method.<br>
+    <b>Java main() method:-</b><br>
+        ->The main() is the starting point for JVM to start execution of a Java program.<br>
+        ->Without the main() method, JVM will not execute the program.<br>
+        ->The syntax of the main() method is:<br><br>
+    <img src="file:///android_res/drawable/javamainmethod.png"><br>
+<b>Method Declaration</b>
+The method declaration provides information about method attributes such as<br>
+->visibility<br>
+->return-type<br>
+->name<br>
+->arguments<br>
+It has six components that are known as method header, as shown in the following figure.<br>
+<img src="file:///android_res/drawable/methodeclaration.png"><br>
+<h3>Types of Method:-</h3>
+->There are two types of methods in Java:<br>
+1.Predefined Method<br>
+2.User-defined Method<br>
+<b>1.Predefined Method</b><br>
+->The method that is already defined in the Java class libraries is known as predefined methods.<br>
+->It is also known as the 'standard library method' or 'built-in method'.<br>
+->We can directly use these methods just by calling them in the program at any point.<br>
+->Some pre-defined methods are length(), equals(), compareTo(), sqrt(), etc.<br>
+->Each and every predefined method is defined inside a class.<br>
+->Such as print() method is defined in the java.io.PrintStream class.<br>
+Example of the predefined method:-<br>
+<code>
+public class Demo<br>
+{<br>
+public static void main(String[] args)<br>
+{<br>
+// using the max() method of Math class<br>
+System.out.print("The maximum number is: " + Math.max(9,7));<br>
+}<br>
+}<br>
+Output:<br>
+The maximum number is: 9<br>
+</code>
+<b>2.User-defined Method</b><br>
+->The method written by the user or programmer is known as a user-defined method.<br>
+Creating a User-defined Method:-<br>
+Let's create a user defined method that checks the number is even or odd.<br>
+<code>
+import java.util.Scanner;<br>
+public class EvenOdd<br>
+{<br>
+public static void main (String args[])<br>
+{<br>
+//creating Scanner class object<br>
+Scanner scan=new Scanner(System.in);<br>
+System.out.print("Enter the number: ");<br>
+//reading value from user<br>
+int num=scan.nextInt();<br>
+//method calling<br>
+findEvenOdd(num);<br>
+}<br>
+//user defined method<br>
+public static void findEvenOdd(int num)<br>
+{<br>
+//method body<br>
+if(num%2==0)<br>
+System.out.println(num+" is even");<br>
+else<br>
+System.out.println(num+" is odd");<br>
+}<br>
+}<br>
+Output:<br>
+Enter the number: 12<br>
+12 is even<br>
+</code>
+<h3>Constructors in Java</h3>
+->A constructor is a block of codes similar to the method.<br>
+->It is called when an instance of the class is created.<br>
+->At the time of calling constructor, memory for the object is allocated in the memory.<br>
+->It is a special type of method which is used to initialize the object.<br>
+->Every time an object is created using the new() keyword, at least one constructor is called.<br>
+->It calls a default constructor if there is no constructor available in the class.<br>
+->In such case, Java compiler provides a default constructor by default.<br>
+<b>Rules for creating Java constructor</b><br>
+1.Constructor name must be the same as its class name<br>
+2.A Constructor must have no explicit return type<br>
+3.A Java constructor cannot be abstract, static, final, and synchronized<br>
+<b>Types of Java constructors</b><br>
+There are two types of constructors in Java:<br>
+1.Default constructor (no-arg constructor)<br>
+2.Parameterized constructor<br>
+<b>1.Java Default Constructor</b><br>
+A constructor is called "Default Constructor" when it doesn't have any parameter.<br>
+->The default constructor is used to provide the default values to the object like 0, null, etc., depending on the type.<br>
+<b>Syntax of default constructor:-</b><br>
+<i>[class_name](){}</i><br>
+<b>Example of default constructor:-</b><br>
+<code>
+    //Java Program to create and call a default constructor<br>
+    class Bike{<br>
+    //creating a default constructor<br>
+    Bike(){<br>
+    System.out.println("Bike is created");<br>
+    }<br>
+    //main method<br>
+    public static void main(String args[]){<br>
+    //calling a default constructor<br>
+    Bike b=new Bike();<br>
+    }<br>
+    }<br>
+    Output:<br>
+    Bike is created<br>
+</code>
+<b>2.Java Parameterized Constructor</b><br>
+    A constructor which has a specific number of parameters is called a parameterized constructor.<br>
+    ->The parameterized constructor is used to provide different values to distinct objects.<br>
+    ->However, you can provide the same values also.<br>
+<b>Example of parameterized constructor:-</b><br>
+<code>
+    //Java Program to demonstrate the use of the parameterized constructor.<br>
+    class Student{<br>
+    int id;<br>
+    String name;<br>
+    //creating a parameterized constructor<br>
+    Student4(int i,String n){<br>
+    id = i;<br>
+    name = n;<br>
+    }<br>
+    //method to display the values<br>
+    void display(){<br>
+    System.out.println(id+" "+name);<br>
+    }<br>
+    public static void main(String args[]){<br>
+    //creating objects and passing values<br>
+    Student4 s1 = new Student(111,"Karan");<br>
+    Student4 s2 = new Student(222,"Aryan");<br>
+    //calling method to display the values of object<br>
+    s1.display();<br>
+    s2.display();<br>
+    }<br>
+    }<br>
+    Output:<br>
+    111 Karan<br>
+    222 Aryan<br>
+</code>
+<h3>Constructor Overloading in Java</h3>
+    ->A constructor is just like a method but without return type.<br>
+    ->It can also be overloaded like Java methods.<br>
+    ->Constructor overloading in Java is a technique of having more than one constructor with different parameter lists.<br>
+    ->They are arranged in a way that each constructor performs a different task.<br>
+    ->They are differentiated by the compiler by the number of parameters in the list and their types.<br>
+<b>Example of Constructor Overloading:-</b><br>
+<code>
+    //Java program to overload constructors<br>
+    class Student{<br>
+    int id;<br>
+    String name;<br>
+    int age;<br>
+    //creating two arg constructor<br>
+    Student5(int i,String n){<br>
+    id = i;<br>
+    name = n;<br>
+    }<br>
+    //creating three arg constructor<br>
+    Student5(int i,String n,int a){<br>
+    id = i;<br>
+    name = n;<br>
+    age=a;<br>
+    }<br>
+    void display(){<br>
+    System.out.println(id+" "+name+" "+age);<br>
+    }<br>
+    public static void main(String args[]){<br>
+    Student5 s1 = new Student(111,"Karan");<br>
+    Student5 s2 = new Student(222,"Aryan",25);<br>
+    s1.display();<br>
+    s2.display();<br>
+    }<br>
+    }<br>
+    Output:<br>
+    111 Karan 0<br>
+    222 Aryan 25<br>
+</code>
+<h3>Difference between constructor and method in Java</h3><br>
+<table border="2">
+    <tbody>
+    <tr><th>Java Constructor</th><th>Java Method</th></tr>
+    <tr><td>A constructor is used to initialize the state of an object.</td><td>A method is used to expose the behavior of an object.</td></tr>
+    <tr><td>A constructor must not have a return type.</td><td>A method must have a return type.</td></tr>
+    <tr><td>The constructor is invoked implicitly.</td><td>The method is invoked explicitly.</td></tr>
+    <tr><td>The Java compiler provides a default constructor if you don't have any constructor in a class.</td><td>The method is not provided by the compiler in any case.</td></tr>
+    <tr><td>The constructor name must be same as the class name.</td><td> The method name may or may not be same as the class name.</td></tr>
+    </tbody>
+</table>
+</p>
+</body>
+</html>

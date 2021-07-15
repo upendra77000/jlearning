@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">Jlearning</string>
+    <string name="entname">Name</string>
+    <string name="entLogin">Login</string>
+    <string name="entPassword">Password</string>
+
+    <string name="load_data">Loading data....</string>
+
+    <string name="list1">
+        <li> Need of Object Oriented Programming</li>\n
+        <li> Principles of Object Oriented languages</li>\n
+        <li> OOP Languages and Applications</li>\n
+        <li> History of JAVA</li>\n
+        <li> Java Virtual Machine(JVM)</li>\n
+        <li> Java Features</li>\n
+        <li> Quiz</li>\n
+    </string>
+
+    <string name="list2">
+        <li> Primitive data types</li>\n
+        <li> Identifiers- Naming Conventions</li>\n
+        <li> Keywords and Literals</li>\n
+        <li> Operators- Binary, Unary and Ternary</li>\n
+        <li> Expressions</li>\n
+        <li> Primitive Type conversion and casting</li>\n
+        <li> Flow of control- branching, conditional, loops</li>\n
+        <li> Quiz</li>\n\n
+    </string>
+
+    <string name="list3">
+        <b>
+        <li> Classes</li>\n
+        <li> Objects</li>\n
+        <li> Creating objects</li>\n
+        <li> Methods</li>\n
+        <li> Constructors- constructor overloading</li>\n
+        <li> Cleaning up Unused Objects- Garbage collector</li>\n
+        <li> Class variable and methods- static keyword, this keyword</li>\n
+        <li> Arrays and Command line arguments</li>\n
+        <li> Quiz</li>\n
+        </b>
+    </string>
+
+    <string name="list4">
+        <li> Types of Inheritance</li>\n
+        <li> Deriving classes using extends keyword</li>\n
+        <li> Method Overloading</li>\n
+        <li> super and final keywords</li>\n
+        <li> Abstract Class</li>\n
+        <li> Quiz</li>\n
+    </string>
+
+    <string name="list5">
+        <li> Creating Interface</li>\n
+        <li> Extending Interface</li>\n
+        <li> Interface Vs Abstract class</li>\n
+        <li> Quiz</li>\n
+    </string>
+
+    <string name="list6">
+        <li> Creating Packages</li>\n
+        <li> Using Packages</li>\n
+        <li> Access protection</li>\n
+        <li> Java I/O package</li>\n
+        <li> Quiz</li>\n
+    </string>
+
+    <string name="list7">
+        <li> Introduction to Exceptions</li>\n
+        <li> Exception handling techniques-try…catch, throw, throws, finally block</li>\n
+        <li> user defined Exception</li>\n
+        <li> Quiz</li>\n
+    </string>
+
+    <string name="list8">
+        <li> Java.lang.Thread</li>\n
+        <li> The main Thread</li>\n
+        <li> Creation of new Threads</li>\n
+        <li> Thread priority</li>\n
+        <li> Multi-Threading - using is alive() and join()</li>\n
+        <li> Synchronization</li>\n
+        <li> Suspending and Resuming Threads</li>\n
+        <li> Communication between Threads</li>\n
+        <li> Quiz</li>\n
+    </string>
+
+    <string name="list9">
+        <li> Overview</li>\n
+        <li> Collection classes</li>\n
+        <li> ArrayLists and Vectors</li>\n
+        <li> HashTable and Stack</li>\n
+        <li> Enumerator and Iterator</li>\n
+        <li> StringTokenizer and Scanner</li>\n
+        <li> Quiz</li>\n
+    </string>
+
+    <string name="list10">
+        <li> Applet class</li>\n
+        <li> Applet structure</li>\n
+        <li> An example Applet program</li>\n
+        <li> Applet life cycle</li>\n
+        <li> paint() and repaint()</li>\n
+        <li> Quiz</li>\n
+    </string>
+
+    <string name="list11">
+        <li> Introduction</li>\n
+        <li> Event Delegation Model</li>\n
+        <li> Java.awt.event Description</li>\n
+        <li> Sources of Events</li>\n
+        <li> Event Listeners</li>\n
+        <li> Adapter classes</li>\n
+        <li> Inner classes with types</li>\n
+        <li> Quiz</li>\n
+    </string>
+
+    <string name="list12">
+        <li> Why AWT?</li>\n
+        <li> Java.awt package</li>\n
+        <li> Components and Containers</li>\n
+        <li> Buttons and Radio buttons</li>\n
+        <li> Label and Checkbox</li>\n
+        <li> List boxes and choice boxes</li>\n
+        <li> Text field and Text area</li>\n
+        <li> Container classes</li>\n
+        <li> Quiz</li>\n
+    </string>
+
+    <string name="list13">
+        <li> Introduction</li>\n
+        <li> JFrame, JApplet and JPanel</li>\n
+        <li> Components in swings</li>\n
+        <li> Layout Managers</li>\n
+        <li> JList and JScrollPane</li>\n
+        <li> JSplitPane</li>\n
+        <li> JTabbedPane</li>\n
+        <li> JDialogBox</li>\n
+        <li> JDBC</li>\n
+        <li> Quiz</li>\n
+    </string>
+    <string name="topic2">Quiz On Programming Constructs</string>
+    <string name="topic1">Quiz On OOP Concepts</string>
+
+
+</resources>

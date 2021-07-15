@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/content_style"
+    tools:context=".unit2_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <Button
+        android:id="@+id/Button4"
+        style="?android:actionBarStyle"
+        android:layout_width="211dp"
+        android:layout_height="147dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10sp"
+        android:background="@drawable/topic_style"
+        android:fontFamily="@font/galindo"
+        android:text="classes and objects"
+        android:textAlignment="center"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="156dp"
+        android:layout_height="28dp"
+        android:textColor="@color/colorBlack"
+        android:text="Topics:-"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="374dp"
+        android:layout_height="168dp"
+        android:layout_gravity="end"
+        android:textColor="@color/colorBlack"
+        android:text="@string/list3"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnQuiz"
+        android:layout_width="148dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:background="@drawable/quiz_button"
+        android:text="Quiz"
+        android:fontFamily="@font/galindo" />
+    </LinearLayout>
+</RelativeLayout>

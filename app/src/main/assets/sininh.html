@@ -1,0 +1,348 @@
+<html>
+<body>
+<b>
+<h2>Inheritance</h2>
+<li> Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object.</li>
+<li> Inheritance represents the IS-A relationship which is also known as a parent-child relationship.</li>
+
+<h2>Terms used in Inheritance</h2>
+<h3>Class:</h3>
+<li> It is a template or blueprint from which objects are created.</li>
+
+<h3>Sub Class/Child Class:</h3>
+<li> Subclass is a class which inherits the other class.</li>
+<li> It is also called a derived class, extended class, or child class.</li>
+
+<h3>Super Class/Parent Class:</h3>
+<li> Superclass is the class from where a subclass inherits the features.</li>
+<li> It is also called a base class or a parent class.</li>
+
+<h2>The syntax of Java Inheritance:</h2>
+<p> class [subclass_name] extends [superclass_name]{  </p>
+<p>   field; </p>
+<p>   method;  </p>
+<p> }  </p>
+
+<li> The extends keyword indicates that you are making a new class that derives from an existing class.</li>
+<li> The meaning of "extends" is to increase the functionality.</li>
+
+<h2>Types of inheritance in java</h2>
+<p> There are 5 types of Inheritance:</p>
+<li> Single Inheritance</li>
+<li> Multilevel Inheritance</li>
+<li> Multiple Inheritance</li>
+<li> Hierarchical Inheritance</li>
+<li> Hybrid Inheritance</li>
+<h2>Single Inheritance</h2>
+<ul>
+<li>When a class inherits another class, it is known as a single inheritance.</li> 
+<li>In the example given below, Dog class inherits the Animal class, so there is the single inheritance.</li>
+</ul>
+<p>Eg:-</p>
+<p>class Animal{  </p>
+<p>void eat(){  </p>
+<p>System.out.println("eating..."); </p>
+<p>}  </p>
+<p>}  </p>
+<p>class Dog extends Animal{  </p>
+<p>void bark(){</p>
+<p>System.out.println("barking..."); </p>
+<p>}  </p>
+<p>}  </p>
+<p>class TestInheritance{  </p>
+<p>public static void main(String args[]){  </p>
+<p>Dog d=new Dog();  </p>
+<p>d.bark();  </p>
+<p>d.eat();  </p>
+<p>}</p>
+    <p>}  </p>
+<p> Output:</p>
+    <p>barking...</p>
+    <p>eating... </p>
+<h2>Multilevel Inheritance</h2>
+<ul>
+    <li>When there is a chain of inheritance, it is known as multilevel inheritance.</li>
+    <li>As you can see in the example given below, BabyDog class inherits the Dog class which again inherits the Animal class, so there is a multilevel inheritance.</li>
+</ul>
+<p>Eg:-</p>
+<p>class Animal{  </p>
+<p>void eat(){</p>
+<p>System.out.println("eating...");</p>
+<p>}  </p>
+<p>}  </p>
+<p>class Dog extends Animal{
+<p>void bark(){
+<p>System.out.println("barking...");
+<p>}
+<p>}
+<p>class BabyDog extends Dog{  </p>
+<p>void weep(){</p>
+<p>System.out.println("weeping...");</p>
+<p>}  </p>
+<p>}  </p>
+<p>class TestInheritance2{  </p>
+<p>public static void main(String args[]){  </p>
+<p>BabyDog d=new BabyDog();  </p>
+<p>d.weep();  </p>
+<p>d.bark();  </p>
+<p>d.eat();  </p>
+<p>}</p>
+<p>}  </p>
+<p>Output:</p>
+<p>weeping...</p>
+<p>barking...</p>
+<p>eating...</p>
+<h2>Hierarchical Inheritance</h2>
+<ul>
+    <li>When two or more classes inherits a single class, it is known as hierarchical inheritance.</li>
+    <li>In the example given below, Dog and Cat classes inherits the Animal class, so there is hierarchical inheritance.</li>
+</ul>
+<p>Eg:-</p>
+<p>class Animal{  </p>
+<p>void eat(){</p>
+<p>System.out.println("eating...");</p>
+<p>}  </p>
+<p>}  </p>
+<p>class Dog extends Animal{  </p>
+<p>void bark(){</p>
+<p>System.out.println("barking...");</p>
+<p>}  </p>
+<p>}  </p>
+<p>class Cat extends Animal{  </p>
+<p>void meow(){</p>
+<p>System.out.println("meowing...");</p>
+<p>}  </p>
+<p>}  </p>
+<p>class TestInheritance3{  </p>
+<p>public static void main(String args[]){  </p>
+<p>Cat c=new Cat();  </p>
+<p>c.meow();  </p>
+<p>c.eat();   </p>
+<p>}</p>
+<p>}  </p>
+<p>Output:</p>
+<p>meowing...</p>
+<p>eating...</p>
+<h2>Multiple Inheritance</h2>
+<ul>
+    <li>In Multiple inheritance ,one class can have more than one superclass and inherit features from all parent classes.</li>
+    <li>Java does not support multiple inheritance with classes.</li>
+    <li>we can achieve multiple inheritance only through Interfaces.</li>
+</ul>
+<h2>Hybrid Inheritance</h2>
+<ul>
+    <li>It is a mix of two or more of the above types of inheritance.</li>
+    <li>Java does not support hybrid inheritance with classes.</li>
+    <li>we can achieve hybrid inheritance only through Interfaces.</li>
+</ul>
+    <h2>The extends keyword</h2>
+    <ul>
+        <li>Java supports class extension via the extends keyword.</li>
+        <li>The "extends" keyword specifies a parent-child relationship between two classes. </li>
+    </ul>
+    <p>Syntax Eg:-</p>
+    <p>class Vehicle</p>
+    <p>{</p>
+    <p>   // member declarations</p>
+    <p>}</p>
+    <p>class Car extends Vehicle</p>
+    <p>{</p>
+    <p>   // inherit accessible members from Vehicle</p>
+    <p>   // provide own member declarations</p>
+    <p>}</p>
+    <p>Above the extends keyword used to establish a relationship between classes Vehicle and Car</p>
+
+    <h2>Method Overloading</h2>
+    <ul>
+        <li>If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.</li>
+        <li>Method overloading increases the readability of the program.</li>
+    </ul>
+
+    <h3>Different ways to overload the method</h3>
+    <p>There are two ways to overload the method in java</p>
+    <ol>
+        <li>By changing number of arguments</li>
+        <li>By changing the data type</li>
+    </ol>
+    <h3>Method Overloading: changing no. of arguments</h3>
+    <p>In this example, we have created two methods, first add() method performs addition of two numbers and second add() method performs addition of three numbers.</p>
+    <p>Eg:-</p>
+    <p>class Adder{  </p>
+    <p>static int add(int a,int b){</p>
+    <p>return a+b;</p>
+    <p>}  </p>
+    <p>static int add(int a,int b,int c){</p>
+    <p>return a+b+c;</p>
+    <p>}  </p>
+    <p>}  </p>
+    <p>class TestOverloading1{  </p>
+    <p>public static void main(String[] args){  </p>
+    <p>System.out.println(Adder.add(11,11)); </p>
+    <p>System.out.println(Adder.add(11,11,11));  </p>
+    <p>}</p>
+    <p>} </p>
+    <p>Output:</p>
+    <p>22</p>
+    <p>33</p>
+    <h3>Method Overloading: changing data type of arguments</h3>
+    <p>In this example, we have created two methods that differs in data type. The first add method receives two integer arguments and second add method receives two double arguments.</p>
+    <p>Eg:-</p>
+    <p>class Adder{  </p>
+    <p>static int add(int a, int b){</p>
+    <p>return a+b;</p>
+    <p>}  </p>
+    <p>static double add(double a, double b){</p>
+    <p>return a+b;</p>
+    <p>}  </p>
+    <p>}  </p>
+    <p>class TestOverloading2{  </p>
+    <p>public static void main(String[] args){  </p>
+    <p>System.out.println(Adder.add(11,11));  </p>
+    <p>System.out.println(Adder.add(12.3,12.6));  </p>
+    <p>} </p>
+    <p>} </p>
+    <p>Output:</p>
+    <p>22</p>
+    <p>24.9</p>
+    <h2>super Keyword</h2>
+    <li>Super is a keyword of Java which refers to the immediate parent of a class.</li>
+    <li>It is used inside the subclass method definition for calling a method defined in the superclass.</li>
+    <h3>Syntax:</h3>
+    <p>super.[method-name]();</p>
+    <h3>Usage of Super Class:</h3>
+    <li>Super variables refer to the variable of a variable of the parent class.</li>
+    <li>Super() invokes the constructor of immediate parent class.</li>
+    <li>Super refers to the method of the parent class.</li>
+    <p>Eg:-</p>
+    <p>class employee {</p>
+    <p>int wt = 8;</p>
+    <p>}</p>
+    <p>class clerk extends employee {</p>
+    <p> int wt = 10;</p>
+    <p> void display() {</p>
+    <p> System.out.println(super.wt);</p>
+    <p>}</p>
+    <p> public static void main(String args[]) {</p>
+    <p>  clerk c = new clerk();</p>
+    <p>  c.display();</p>
+    <p> }</p>
+    <p>}</p>
+    <p>Output:</p>
+    <p>8</p>
+
+    <h2>final Keyword</h2>
+    <p>Final is a keyword in Java that is used to restrict the user and can be used in many respects. Final can be used with:</p>
+    <li>Class</li>
+    <li>Methods</li>
+    <li>Variables</li>
+    <h3>Class declared as final:</h3>
+    <p>When a class is declared as final, it cannot be extended further.</p>
+    <p>Eg:-</p>
+    <p>final class stud {</p>
+    <p> // Methods cannot be extended to its sub class</p>
+    <p>}</p>
+    <p>class books extends stud {</p>
+    <p> void show() {</p>
+    <p>  System.out.println("Book-Class method");</p>
+    <p> }</p>
+    <p> public static void main(String args[]) {</p>
+    <p>  books B1 = new books();</p>
+    <p>  B1.show();</p>
+    <p> }</p>
+    <p>}</p>
+    <p>Output:</p>
+    <p>error: cannot inherit from final stud</p>
+    <p>class books extends stud{</p>
+    <p>^</p>
+    <h4>This is because classes declared as final cannot be inherited.</h4>
+    <h3>Method declared as final:</h3>
+    <p>A method declared as final cannot be overridden.</p>
+    <p>This means even when a child class can call the final method of parent class.</p>
+    <p>But overriding will not be possible.</p>
+    <p>Eg:-</p>
+    <p>class stud {</p>
+    <p> final void show() {</p>
+    <p>  System.out.println("Class - stud : method defined");</p>
+    <p> }</p>
+    <p>}</p>
+    <p>class books extends stud {</p>
+    <p> void show() {</p>
+    <p>  System.out.println("Class - books : method defined");</p>
+    <p> }</p>
+    <p> public static void main(String args[]) {</p>
+    <p>  books B2 = new books();</p>
+    <p>  B2.show();</p>
+    <p> }</p>
+    <p>}</p>
+    <p>Output:</p>
+    <p>show() in books cannot override show() in stud</p>
+    <p> void show() {</p>
+    <p>           ^</p>
+    <h3>Variable declared as final:</h3>
+    <p>Once a variable is assigned with the keyword final, it always contains the same exact value.</p>
+    <p>A final variable that is not initialized at the time of declaration is known as a blank final variable.</p>
+    <p>Eg:-</p>
+    <p>class stud {</p>
+    <p> final int val;</p>
+    <p> stud() {</p>
+    <p>  val = 60;</p>
+    <p> }</p>
+    <p> void method() {</p>
+    <p>  System.out.println(val);</p>
+    <p> }</p>
+    <p> public static void main(String args[]) {</p>
+    <p>  stud S1 = new  stud();</p>
+    <p>  S1.method();</p>
+    <p> }</p>
+    <p>}</p>
+    <p>Output:</p>
+    <p>80</p>
+    <h2>Abstract class in Java</h2>
+    <li>A class which is declared with the abstract keyword is known as an abstract class.</li>
+    <li>It can have abstract and non-abstract methods.</li>
+    <li>It can have constructors and static methods also.</li>
+    <li>It can have final methods which will force the subclass not to change the body of the method.</li>
+    <p>Eg:-</p>
+    <p>abstract class Bike{</p>
+    <p>abstract void run();</p>
+    <p>}</p>
+    <p>class Honda4 extends Bike{</p>
+    <p>void run(){System.out.println("running safely");</p>
+    <p>}</p>
+    <p>public static void main(String args[]){</p>
+    <p>Bike obj = new Honda4();</p>
+    <p>obj.run();</p>
+    <p>}</p>
+    <p>}</p>
+    <p>Output:</p>
+    <p>running safely</p>
+    <h3>Abstract class having constructor, data member and methods</h3>
+    <p>//Example of an abstract class that has abstract and non-abstract methods</p>
+    <p>abstract class Bike{</p>
+    <p>Bike(){System.out.println("bike is created");</p>
+    <p>}</p>
+    <p>abstract void run();</p>
+    <p>void changeGear(){System.out.println("gear changed");</p>
+    <p>}</p>
+    <p>}</p>
+    <p>//Creating a Child class which inherits Abstract class</p>
+    <p>class Honda extends Bike{</p>
+    <p>void run(){System.out.println("running safely..");</p>
+    <p>}</p>
+    <p>}</p>
+    <p>//Creating a Test class which calls abstract and non-abstract methods</p>
+    <p>class TestAbstraction2{</p>
+    <p>public static void main(String args[]){</p>
+    <p>Bike obj = new Honda();</p>
+    <p>obj.run();</p>
+    <p>obj.changeGear();</p>
+    <p>}</p>
+    <p>}</p>
+    <p>Output:</p>
+    <p>bike is created</p>
+    <p>running safely..</p>
+    <p>gear changed</p>
+
+</b>
+</body>
+</html>

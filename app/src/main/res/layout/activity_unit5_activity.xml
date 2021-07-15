@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".unit5_activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/content_style">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Button7"
+            style="?android:actionBarStyle"
+            android:layout_width="211dp"
+            android:layout_height="147dp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/topic_style"
+            android:fontFamily="@font/galindo"
+            android:text="Applets"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="125dp"
+        android:layout_height="28dp"
+        android:textColor="@color/colorBlack"
+        android:text="Topics:-"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="350dp"
+            android:layout_height="104dp"
+            android:layout_gravity="end"
+            android:textColor="@color/colorBlack"
+            android:text="@string/list10" />
+
+        <Button
+            android:id="@+id/btnQuiz"
+            android:layout_width="148dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/quiz_button"
+            android:text="Quiz"
+            android:fontFamily="@font/galindo"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="10sp" />
+
+
+        <Button
+            android:id="@+id/Button8"
+            style="?android:actionBarStyle"
+            android:layout_width="211dp"
+            android:layout_height="147dp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/topic_style"
+            android:fontFamily="@font/galindo"
+            android:text="Event Handling"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="125dp"
+        android:layout_height="28dp"
+        android:text="Topics:-"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="350dp"
+            android:layout_height="138dp"
+            android:layout_gravity="end"
+            android:textColor="@color/colorBlack"
+            android:text="@string/list11"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView36"
+            app:layout_constraintVertical_bias="0.051" />
+
+        <Button
+            android:id="@+id/btnQuiz1"
+            android:layout_width="148dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/quiz_button"
+            android:text="Quiz"
+            android:fontFamily="@font/galindo"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="10sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

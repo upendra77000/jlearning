@@ -1,0 +1,215 @@
+<html>
+<body>
+<b>
+    <h2>Data types in Java</h2>
+    <li> Data types specify the different sizes and values that can be stored in the variable.</li>
+    <li> There are two types of data types in Java:</li>
+    <h3>Primitive data types: </h3>
+    <li> The primitive data types include boolean, char, byte, short, int, long, float and double.</li>
+    <h3>Non-Primitive data types: </h3>
+    <li> The non-primitive data types include Classes, Interfaces, and Arrays.</li>
+</b>
+<p style="text-align:center;">
+    <img src="file:///android_res/drawable/javadatatypes.jpg" border="2" height="400" width="385">
+</p>
+<b>
+    <h2>Java Primitive Data Types</h2>
+    <li> In Java language, primitive data types are the building blocks of data manipulation.</li>
+    <li> There are 8 types of primitive data types:</li>
+    <li> boolean data type</li>
+    <li> byte data type</li>
+    <li> char data type</li>
+    <li> short data type</li>
+    <li> int data type</li>
+    <li> long data type</li>
+    <li> float data type</li>
+    <li> double data type</li>
+
+    <h3>Boolean Data Type</h3>
+    <li> The Boolean data type is used to store only two possible values: true and false.</li>
+    <p> Eg:-</p>
+    <p> class booleantest {</p>
+    <p> public static void main(String args[]) {</p>
+    <p> Boolean one=true;</p>
+    <p> Boolean two=false;</p>
+    <p> System.out.println(one);</p>
+    <p> System.out.println(two);</p>
+    <p> }</p>
+    <p> }</p>
+    <p> Output:</p>
+    <p> true</p>
+    <p> false</p>
+
+    <h3>Byte Data Type</h3>
+    <li> Its value-range lies between -128 to 127</li>
+    <li> Its default value is 0.</li>
+    <li> It saves space because a byte is 4 times smaller than an integer.</li>
+    <li> It can also be used in place of int data type.</li>
+    <p> Eg:-</p>
+    <p> class bytetest {</p>
+    <p> public static void main(String args[]) {</p>
+    <p> byte a=10;</p>
+    <p> byte b=-10;</p>
+    <p> System.out.println(a);</p>
+    <p> System.out.println(b);</p>
+    <p> }</p>
+    <p> }</p>
+    <p> Output:</p>
+    <p> 10</p>
+    <p> -10</p>
+
+    <h3>Short Data Type</h3>
+    <li> Its value-range lies between -32,768 to 32,767</li>
+    <li> Its default value is 0.</li>
+    <li> The short data type can also be used to save memory just like byte data type.</li>
+    <li> A short data type is 2 times smaller than an integer.</li>
+    <p> Eg:-</p>
+    <p> class bytetest {</p>
+    <p> public static void main(String args[]) {</p>
+    <p> byte a=10;</p>
+    <p> byte b=-10;</p>
+    <p> System.out.println(a);</p>
+    <p> System.out.println(b);</p>
+    <p> }</p>
+    <p> }</p>
+    <p> Output:</p>
+    <p> 10</p>
+    <p> -10</p>
+
+    <h3>Int Data Type</h3>
+        <li> Its value-range lies between - 2,147,483,648 (-2^31) to 2,147,483,647 (2^31 -1)</li>
+        <li> Its default value is 0.</li>
+        <li> The int data type is generally used as a default data type for integral values</li>
+        <p> Eg:-</p>
+        <p> class inttest {</p>
+        <p> public static void main(String args[]) {</p>
+        <p> int a=100;</p>
+        <p> int b=-100;</p>
+        <p> System.out.println(a);</p>
+        <p> System.out.println(b);</p>
+        <p> }</p>
+        <p> }</p>
+        <p> Output:</p>
+        <p> 100</p>
+        <p> -100</p>
+
+        <h3>Long Data Type</h3>
+        <li> Its value-range lies between -9,223,372,036,854,775,808(-2^63) to 9,223,372,036,854,775,807(2^63 -1)(inclusive).</li>
+        <li> Its default value is 0.</li>
+        <li> The long data type is used when you need a range of values more than those provided by int.</li>
+        <p> Eg:-</p>
+        <p> class longtest {</p>
+        <p> public static void main(String args[]) {</p>
+        <p> long a=100000L;</p>
+        <p> long b=-100000L;</p>
+        <p> System.out.println(a);</p>
+        <p> System.out.println(b);</p>
+        <p> }</p>
+        <p> }</p>
+        <p> Output:</p>
+        <p> 100000</p>
+        <p> -100000</p>
+
+        <h3>Float Data Type</h3>
+        <li> Its value range is unlimited.</li>
+        <li> Its default value is 0.0F</li>
+        <p> Eg:-</p>
+        <p> class floattest {</p>
+        <p> public static void main(String args[]) {</p>
+        <p> float a=100000f;</p>
+        <p> float b=-100000f;</p>
+        <p> System.out.println(a);</p>
+        <p> System.out.println(b);</p>
+        <p> }</p>
+        <p> }</p>
+        <p> Output:</p>
+        <p> 100000.0</p>
+        <p> -100000.0</p>
+
+        <h3>Double Data Type</h3>
+        <li> Its value range is unlimited.</li>
+        <li> Its default value is 0.0d</li>
+        <p> Eg:-</p>
+        <p> class doubletest {</p>
+        <p> public static void main(String args[]) {</p>
+        <p> double a=100000;</p>
+        <p> double b=-100000;</p>
+        <p> System.out.println(a);</p>
+        <p> System.out.println(b);</p>
+        <p> }</p>
+        <p> }</p>
+        <p> Output:</p>
+        <p> 100000.0</p>
+        <p> -100000.0</p>
+
+        <h3>Char Data Type</h3>
+        <li> Its value range lies between '\u0000\' (or 0) to '\uffff' (or 65,535 inclusive)</li>
+        <p> Eg:-</p>
+        <p> class chartest {</p>
+        <p> public static void main(String args[]) {</p>\n
+        <p> char a='A';</p>
+        <p> char b='B';</p>
+        <p> System.out.println(a);</p>
+        <p> System.out.println(b);</p>
+        <p> }</p>
+        <p> }</p>
+        <p> Output:</p>
+        <p> A</p>
+        <p> B</p>
+
+        <h2>Java Non-Primitive Datatypes</h2>
+        <li> Non-Primitive data types refer to objects and hence they are called reference types.</li>
+</b>
+<p style="text-align:center;">
+    <img src="file:///android_res/drawable/nonprim.jpg" border="2" height="400" width="390">
+</p>
+<b>
+    <h3>1)Strings</h3>
+    <li> A string is an object that represents a sequence of characters.</li>
+    <li> The java.lang.String class is used to create a string object.</li>
+
+    <h3>2)Arrays</h3>
+    <li> Arrays in Java are homogeneous data structures implemented in Java as objects.</li>
+    <li> Arrays store one or more values of a specific data type and provide indexed access to store the same.</li>
+
+    <h3>3)Classes</h3>
+    <li> A class in Java is a blueprint which includes all your data.</li>
+    <li> A class contains fields(variables) and methods to describe the behavior of an object.</li>
+
+    <h3>4)Interfaces</h3>
+    <li> Like a class, an interface can have methods and variables, but the methods declared in interface are by default abstract.</li>
+
+    <h2>Difference between primitive and non-primitive data types</h2>
+</b>
+<p style="text-align:center;">
+    <img src="file:///android_res/drawable/primvsnonprim.jpg" border="2" height="450" width="390">
+</p>
+<b>
+    <h3>Java Identifiers</h3>
+        <li> In programming languages, identifiers are used for identification purpose.</li>
+        <li> In Java, an identifier can be a class name, method name, variable name or a label.</li>
+        <p> For example :</p>
+        <p> class test {</p>
+        <p> public static void main(String args[]) {</p>
+        <p> int a=100;</p>
+        <p> System.out.println(a);</p>
+        <p> System.out.println(b);</p>
+        <p> }</p>
+        <p> }</p>
+
+        <h3>In the above java code, we have 5 identifiers namely :</h3>
+        <li> Test : class name.</li>
+        <li> main : method name.</li>
+        <li> String : predefined class name.</li>
+        <li> args : variable name.</li>
+        <li> a :  variable name.</li>
+
+        <h2>Rules for defining Java Identifiers</h2>
+        <p>There are certain rules for defining a valid java identifier. These rules must be followed, otherwise we get compile-time error.         These rules are also valid for other languages like C,C++.</p>
+        <li>The only allowed characters for identifiers are all alphanumeric characters([A-Z],[a-z],[0-9]), ‘$‘(dollar sign) and ‘_‘         (underscore).For example “geek@” is not a valid java identifier as it contain ‘@’ special character.</li>
+        <li>Identifiers should not start with digits([0-9]). For example “123geeks” is a not a valid java identifier.</li>
+        <li>Java identifiers are case-sensitive.</li>
+        <li>Reserved Words can’t be used as an identifier. For example “int while = 20;” is an invalid statement as while is a reserved         word.</li>
+</b>
+</body>
+</html>

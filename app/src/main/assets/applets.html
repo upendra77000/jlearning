@@ -1,0 +1,155 @@
+<html>
+<head>
+    <h2>Java Applet</h2>
+    <p>
+        Applet is a special type of program that is embedded in the webpage to generate the dynamic content. <br>
+        It runs inside the browser and works at client side.<br>
+    <h3>Advantage of Applet</h3>
+    There are many advantages of applet. They are as follows:<br>
+    ->It works at client side so less response time.<br>
+    ->Secured<br>
+    ->It can be executed by browsers running under many plateforms, including Linux, Windows, Mac Os etc.<br>
+    <h3>Drawback of Applet</h3>
+    Plugin is required at client browser to execute applet.<br>
+    <h3>Hierarchy of Applet</h3>
+    <img src="file:///android_res/drawable/applethierarchy.jpg"/><br>
+    As displayed in the above diagram, Applet class extends Panel.<br>
+    Panel class extends Container which is the subclass of Component.<br>
+    <h3>Lifecycle of Java Applet</h3>
+    ->Applet is initialized.<br>
+    ->Applet is started.<br>
+    ->Applet is painted.<br>
+    ->Applet is stopped.<br>
+    ->Applet is destroyed.<br>
+    <h3>Lifecycle methods for Applet:</h3>
+    ->The java.applet.Applet class 4 life cycle methods and java.awt.<br>
+    ->Component class provides 1 life cycle methods for an applet.<br>
+    <b>1.java.applet.Applet class</b><br>
+    For creating any applet java.applet.Applet class must be inherited.<br>
+    It provides 4 life cycle methods of applet.<br>
+    ->public void init(): is used to initialized the Applet. It is invoked only once.<br>
+    ->public void start(): is invoked after the init() method or browser is maximized. It is used to start the Applet.<br>
+    ->public void stop(): is used to stop the Applet. It is invoked when Applet is stop or browser is minimized.<br>
+    ->public void destroy(): is used to destroy the Applet. It is invoked only once.<br>
+    <b>2.java.awt.Component class</b><br>
+    The Component class provides 1 life cycle method of applet.<br>
+    ->public void paint(Graphics g): is used to paint the Applet.<br>
+    It provides Graphics class object that can be used for drawing oval, rectangle, arc etc.<br>
+    <h3>How to run an Applet:</h3>
+    There are two ways to run an applet<br>
+    <b>1.By html file.</b><br>
+    Simple example of Applet by html file:<br>
+    ->To execute the applet by html file, create an applet and compile it.<br>
+    ->After that create an html file and place the applet code in html file.<br>
+    ->Now click the html file.<br>
+    <code><br>
+        //First.java<br>
+        import java.applet.Applet;<br>
+        import java.awt.Graphics;<br>
+        public class First extends Applet{<br>
+        public void paint(Graphics g){<br>
+        g.drawString("welcome",150,150);<br>
+        }<br>
+        }<br>
+    </code><br>
+    <b>myapplet.html</b><br>
+    <code>
+        &lt;html&gt;<br>
+        &lt;body&gt;<br>
+        &lt;applet code="First.class" width="300" height="300">&lt;/applet><br>
+        &lt;/body><br>
+        &lt;/html><br>
+    </code>
+    <b>2.By appletViewer tool.</b><br>
+    Simple example of Applet by appletviewer tool:<br>
+    ->create an applet that contains applet tag in comment and compile it.<br>
+    ->After that run it by: appletviewer First.java.<br>
+    <code>
+        //First.java<br>
+        import java.applet.Applet;<br>
+        import java.awt.Graphics;<br>
+        public class First extends Applet{<br>
+        public void paint(Graphics g){<br>
+        g.drawString("welcome to applet",150,150);<br>
+        }<br>
+        }<br>
+        /*<br>
+        &lt;applet code="First.class" width="300" height="300">&lt;/applet><br>
+        */<br>
+    </code>
+    To execute the applet by appletviewer tool, write in command prompt:<br>
+    c:\>javac First.java<br>
+    c:\>appletviewer First.java<br>
+    <h3>Displaying Graphics in Applet</h3>
+    java.awt.Graphics class provides many methods for graphics programming.<br>
+    Commonly used methods of Graphics class:<br>
+    -><b>public abstract void drawString(String str, int x, int y):</b> is used to draw the specified string.<br>
+    -><b>public void drawRect(int x, int y, int width, int height):</b> draws a rectangle with the specified width and height.<br>
+    -><b>public abstract void fillRect(int x, int y, int width, int height):</b> used to fill rectangle with the default color and specified width & height.<br>
+    -><b>public abstract void drawOval(int x, int y, int width, int height):</b> is used to draw oval with the specified width and height.<br>
+    -><b>public abstract void fillOval(int x, int y, int width, int height):</b> is used to fill oval with the default color and specified width and height.<br>
+    -><b>public abstract void drawLine(int x1, int y1, int x2, int y2):</b> is used to draw line between the points(x1, y1) and (x2, y2).<br>
+    -><b>public abstract boolean drawImage(Image img, int x, int y, ImageObserver observer):</b> is used draw the specified image.<br>
+    -><b>public abstract void drawArc(int x, int y, int width, int height, int startAngle, int arcAngle):</b> is used draw a circular or elliptical arc.<br>
+    -><b>public abstract void fillArc(int x, int y, int width, int height, int startAngle, int arcAngle):</b> is used to fill a circular or elliptical arc.<br>
+    -><b>public abstract void setColor(Color c):</b> is used to set the graphics current color to the specified color.<br>
+    -><b>public abstract void setFont(Font font):</b> is used to set the graphics current font to the specified font.<br>
+    <b>Example of Graphics in applet:</b>
+    <code>
+    import java.applet.Applet;<br>
+    import java.awt.*;<br>
+    public class GraphicsDemo extends Applet{<br>
+    public void paint(Graphics g){<br>
+    g.setColor(Color.red);<br>
+    g.drawString("Welcome",50, 50);<br>
+    g.drawLine(20,30,20,300);<br>
+    g.drawRect(70,100,30,30);<br>
+    g.fillRect(170,100,30,30);<br>
+    g.drawOval(70,200,30,30);<br>
+    g.setColor(Color.pink);<br>
+    g.fillOval(170,200,30,30);<br>
+    g.drawArc(90,150,30,30,30,270);<br>
+    g.fillArc(270,150,30,30,0,180);<br>
+    }<br>
+    }<br>
+    /*<br>
+    &lt;applet code="graphicsdemo.class" width="300" height="300>&lt;/applet><br>
+    */<br>
+    for Compiling:- javac graphicsdemo.java<br>
+    for Running:-   appletviewer graphicsdemo.java<br>
+    </code>
+    <h3>Displaying Image in Applet</h3>
+    Applet is mostly used in games and animation.<br>
+    For this purpose image is required to be displayed.<br>
+    The java.awt.Graphics class provide a method drawImage() to display the image.<br>
+    <b>Syntax of drawImage() method:</b><br>
+    -><b>public abstract boolean drawImage(Image img, int x, int y, ImageObserver observer):</b> is used draw the specified image.<br>
+    How to get the object of Image:<br>
+    The java.applet.Applet class provides getImage() method that returns the object of Image.<br>
+    <b>Syntax:</b><br>
+    ->public Image getImage(URL u, String image){}<br>
+    Other required methods of Applet class to display image:<br>
+    ->public URL getDocumentBase(): is used to return the URL of the document in which applet is embedded.<br>
+    ->public URL getCodeBase(): is used to return the base URL.<br>
+    <b>Example of displaying image in applet:</b><br>
+    <code>
+    import java.awt.*;<br>
+    import java.applet.*;<br>
+    public class DisplayImage extends Applet {<br>
+    Image picture;<br>
+    public void init() {<br>
+    picture = getImage(getDocumentBase(),"xyz.jpg");<br>
+    }<br>
+    public void paint(Graphics g) {<br>
+    g.drawImage(picture, 30,30, this);<br>
+    }<br>
+    }<br>
+    /*<br>
+    &lt;applet code="DisplayImage.class" width="300" height="300>&lt;/applet><br>
+    */<br>
+    for Compiling:- javac graphicsdemo.java<br>
+    for Running:-   appletviewer graphicsdemo.java<br>
+    </code>
+    </p>
+</head>
+</html>

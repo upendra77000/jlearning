@@ -1,0 +1,137 @@
+<html>
+<body>
+<h2>Interface in Java</h2>
+<p>
+    An interface in Java is a blueprint of a class.<br>
+    It has static constants and abstract methods.<br>
+    There can be only abstract methods in the Java interface, not method body.<br>
+    It is used to achieve abstraction and multiple inheritance in Java.<br>
+    In other words, you can say that interfaces can have abstract methods and variables.<br>
+    It cannot have a method body.<br>
+    <h3>Why use Java interface?</h3>
+    There are mainly three reasons to use interface.<br><br>
+    <img src="file:///android_res/drawable/interf.jpeg" border="2" class="center"/>
+    <h3>How to declare an interface?</h3>
+    <b>Syntax:</b><br>
+    <code>
+    interface [interface_name]{<br>
+    // declare constant fields<br>
+    // declare methods that abstract<br>
+    // by default. <br>
+        }
+    </code>
+    <h2>The relationship between classes and interfaces</h2>
+    As shown in the figure given below<br>
+    a class extends another class <br>
+    an interface extends another interface <br>
+    but a class implements an interface.<br><br>
+    <img src="file:///android_res/drawable/interfacerelation.jpg" border="2">
+<h2>Java Interface Example:</h2>
+<code>
+//Interface declaration:  <br>
+interface Drawable{<br>
+void draw();<br>
+}<br>
+//Implementation: <br>
+class Rectangle implements Drawable{<br>
+public void draw(){System.out.println("drawing rectangle");<br>
+    }<br>
+}<br>
+class Circle implements Drawable{<br>
+public void draw(){System.out.println("drawing circle");<br>
+    }<br>
+}<br>
+//Using interface: <br>
+class TestInterface1{<br>
+public static void main(String args[]){<br>
+Drawable d=new Circle();//In real scenario, object is provided by method e.g. getDrawable()<br>
+d.draw();<br>
+}<br>
+    }<br>
+    Output:-<br>
+    drawing circle
+</code>
+<h2>Multiple inheritance in Java by interface</h2>
+Multiple inheritance is not supported through class in java, but it is possible by an interface<br>
+If a class implements multiple interfaces, or an interface extends multiple interfaces, it is known as multiple inheritance.<br><br>
+<img src="file:///android_res/drawable/multiinher.jpeg" border="2"/>
+<code>
+    <br>Example:-<br>
+interface Printable{<br>
+void print();<br>
+}<br>
+interface Showable{<br>
+void print();<br>
+}<br>
+class TestInterface3 implements Printable, Showable{<br>
+public void print(){System.out.println("Hello");<br>
+}<br>
+public static void main(String args[]){<br>
+TestInterface3 obj = new TestInterface3();<br>
+obj.print();<br>
+}<br>
+}<br>
+    Output:<br>
+    Hello
+</code>
+<h2>Difference between abstract class and interface</h2>
+<p>Abstract class and interface both are used to achieve abstraction where we can declare the abstract methods. Abstract class and interface both can't be instantiated.</p>
+<p>But there are many differences between abstract class and interface that are given below.</p>
+<table border="2">
+    <tbody><tr><th>Abstract class</th><th>Interface</th></tr>
+    <tr><td>1) Abstract class can <strong>have abstract and non-abstract</strong> methods.</td><td>Interface can have <strong>only abstract</strong> methods. Since Java 8, it can have <strong>default and static methods</strong> also.</td></tr>
+    <tr><td>2) Abstract class <strong>doesn't support multiple inheritance</strong>.</td><td>Interface <strong>supports multiple inheritance</strong>.</td></tr>
+    <tr><td>3) Abstract class <strong>can have final, non-final, static and non-static variables</strong>.</td><td>Interface has <strong>only static and final variables</strong>.</td></tr>
+    <tr><td>4) Abstract class <strong>can provide the implementation of interface</strong>.</td><td>Interface <strong>can't provide the implementation of abstract class</strong>.</td></tr>
+    <tr><td>5) The <strong>abstract keyword</strong> is used to declare abstract class.</td><td>The <strong>interface keyword</strong> is used to declare interface.</td></tr>
+    <tr><td>6) An <strong>abstract class</strong> can extend another Java class and implement multiple Java interfaces.</td><td>An <strong>interface</strong> can extend another Java interface only.</td></tr>
+    <tr><td>7) An <strong>abstract class</strong> can be extended using keyword "extends".</td><td> An <strong>interface</strong> can be implemented using keyword "implements".</td></tr>
+    <tr><td>8) A Java <strong>abstract class</strong> can have class members like private, protected, etc.</td><td>Members of a Java interface are public by default. </td></tr>
+    <tr><td>9)<strong>Example:</strong><br> public abstract class Shape{<br>public abstract void draw();<br>}</td><td><strong>Example:</strong><br> public interface Drawable{<br>void draw();<br>}</td></tr>
+    </tbody>
+</table>
+<h2>Example of abstract class and interface in Java</h2>
+<code>
+Let's see a simple example where we are using interface and abstract class both.<br>
+//Creating interface that has 4 methods<br>
+interface A{<br>
+void a();//bydefault, public and abstract<br>
+void b();<br>
+void c();<br>
+void d();<br>
+}<br>
+//Creating abstract class that provides the implementation of one method of A interface<br>
+abstract class B implements A{<br>
+public void c(){<br>
+    System.out.println("I am C");<br>
+}<br>
+}<br>
+//Creating subclass of abstract class, now we need to provide the implementation of rest of the methods<br>
+class M extends B{<br>
+public void a(){System.out.println("I am a");<br>
+}<br>
+public void b(){System.out.println("I am b");<br>
+}<br>
+public void d(){System.out.println("I am d");<br>
+}<br>
+}<br>
+//Creating a test class that calls the methods of A interface<br>
+class Test5{<br>
+public static void main(String args[]){<br>
+A a=new M();<br>
+a.a();<br>
+a.b();<br>
+a.c();<br>
+a.d();<br>
+}<br>
+}<br>
+    Output:<br>
+    I am a<br>
+    I am b<br>
+    I am c<br>
+    I am d
+</code>
+</p>
+</body>
+</html>
+

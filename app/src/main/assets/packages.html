@@ -1,0 +1,127 @@
+<html>
+<head>
+    <h2>Java Package</h2>
+    <p>A java package is a group of similar types of classes, interfaces and sub-packages.</p>
+    <p>Package in java can be categorized in two forms: </p>
+    <li>built-in package </li>
+    <li>user-defined package</li>
+    <p>There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc.</p>
+    <h2>Advantage of Java Package</h2>
+    <li>Java package is used to categorize the classes and interfaces so that they can be easily maintained.</li>
+    <li>Java package provides access protection.</li>
+    <li>Java package removes naming collision.</li>
+    <h3>Simple example of java package</h3>
+    <p>The package keyword is used to create a package in java.</p>
+    <code>package mypack;  <br>
+        public class Simple{  <br>
+        public static void main(String args[]){  <br>
+        System.out.println("Welcome to package");  <br>
+        }  <br>
+        }  <br>
+        output:-Welcome to package
+    </code>
+    <h3>How to compile java package</h3>
+    <p>If you are not using any IDE, you need to follow the syntax given below:<br>
+        <b>javac -d [directory] [javafilename]</b><br>
+        For example:<br>
+        <b>javac -d . Simple.java</b><br>
+        To Run: java mypack.Simple
+    </p>
+    <p>
+    <h3>How to access package from another package?</h3>
+    To access the package from outside the package, we have 2 ways:
+    <li>import package.*;</li>
+    <li>import package.classname;</li>
+    <h2>Using packagename.*</h2>
+    If you use package.* then all the classes and interfaces of this package will be accessible but not subpackages.<br>
+    The "import" keyword is used to make the classes and interface of another package accessible to the current package.<br>
+    <h3>Example of package that import the packagename.*</h3>
+    <code>//save by A.java<br>
+    package pack;<br>
+    public class A{<br>
+    public void msg(){System.out.println("Hello"); <br>
+        }<br>
+    }<br><br>
+    //save by B.java<br>
+    package mypack;<br>
+    import pack.*;<br>
+    class B{<br>
+    public static void main(String args[]){<br>
+    A obj = new A();<br>
+    obj.msg();<br>
+    }<br>
+    }<br>
+    Output:Hello
+    </code>
+    <h2>Using packagename.classname</h2>
+    If you import package.classname then only declared class of this package will be accessible.<br>
+    <h3>Example of package by import package.classname</h3>
+    <code>//save by A.java<br>
+    package pack;<br>
+    public class A{<br>
+    public void msg(){<br>
+        System.out.println("Hello");<br>
+    }<br>
+    }<br><br>
+    //save by B.java<br>
+    package mypack;<br>
+    import pack.A;<br>
+    class B{<br>
+    public static void main(String args[]){<br>
+    A obj = new A();<br>
+    obj.msg();<br>
+    }<br>
+    }<br>
+    Output:Hello
+    </code>
+    </p>
+    <h3>Understanding Java Access Modifiers</h3>
+    <table border="2dp">
+        <tbody>
+        <tr>
+            <th>Access Modifier</th>
+            <th>within class</th>
+            <th>within package</th>
+            <th>outside package by subclass only</th>
+            <th>outside package</th>
+        </tr>
+        <tr>
+            <td>
+                <b>Private</b>
+            </td>
+            <td>Y</td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Default</b>
+            </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>N</td>
+            <td>N</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Protected</b>
+            </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>N</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Public</b>
+            </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        </tbody>
+    </table>
+</head>
+</html>

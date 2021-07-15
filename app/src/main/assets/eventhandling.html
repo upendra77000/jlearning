@@ -1,0 +1,154 @@
+<html>
+<head>
+    <h2>Java Event Handling</h2>
+    <p>
+    Changing the state of an object is known as an event.<br>
+    For example<br>
+    ->click on button<br>
+    ->dragging mouse etc.<br>
+    The java.awt.event package provides many event classes and Listener interfaces for event handling.<br>
+<h3>Java Event classes and Listener interfaces</h3>
+    <table border="2">
+        <tbody><tr><th>Event Classes</th><th>Listener Interfaces</th></tr>
+        <tr><td>ActionEvent</td><td>ActionListener</td></tr>
+        <tr><td>MouseEvent</td><td>MouseListener and MouseMotionListener</td></tr>
+        <tr><td>MouseWheelEvent</td><td>MouseWheelListener</td></tr>
+        <tr><td>KeyEvent</td><td>KeyListener</td></tr>
+        <tr><td>ItemEvent</td><td>ItemListener</td></tr>
+        <tr><td>TextEvent</td><td>TextListener</td></tr>
+        <tr><td>AdjustmentEvent</td><td>AdjustmentListener</td></tr>
+        <tr><td>WindowEvent</td><td>WindowListener</td></tr>
+        <tr><td>ComponentEvent</td><td>ComponentListener</td></tr>
+        <tr><td>ContainerEvent</td><td>ContainerListener</td></tr>
+        <tr><td>FocusEvent</td><td>FocusListener</td></tr>
+        </tbody>
+    </table>
+<h3>Steps to perform Event Handling</h3>
+    Following steps are required to perform event handling:<br>
+    ->Register the component with the Listener
+<b>Registration Methods</b><br>
+    1.Button<br>
+    ->public void addActionListener(ActionListener a){}<br>
+    2.MenuItem<br>
+    ->public void addActionListener(ActionListener a){}<br>
+    3.TextField<br>
+    ->public void addTextListener(TextListener a){}<br>
+    4.TextArea<br>
+    ->public void addTextListener(TextListener a){}<br>
+    5.Checkbox<br>
+    ->public void addItemListener(ItemListener a){}<br>
+    6.Choice<br>
+    public void addItemListener(ItemListener a){}<br>
+    7.List<br>
+    ->public void addActionListener(ActionListener a){}<br>
+    ->public void addItemListener(ItemListener a){}<br>
+<h3>Java Event Handling Code</h3>
+    We can put the event handling code into one of the following places:<br>
+    1.Within class<br>
+    2.Other class<br>
+    3.Anonymous class<br>
+<b>1.Java event handling within the class</b><br>
+<code>
+    import java.awt.*;<br>
+    import java.awt.event.*;<br>
+    class AEvent extends Frame implements ActionListener{<br>
+    TextField tf;<br>
+    AEvent(){<br>
+    //create components<br>
+    tf=new TextField();<br>
+    tf.setBounds(60,50,170,20);<br>
+    Button b=new Button("click me");<br>
+    b.setBounds(100,120,80,30);<br>
+    //register listener<br>
+    b.addActionListener(this);//passing current instance<br>
+    //add components and set size, layout and visibility<br>
+    add(b);add(tf);<br>
+    setSize(300,300);<br>
+    setLayout(null);<br>
+    setVisible(true);<br>
+    }<br>
+    public void actionPerformed(ActionEvent e){<br>
+    tf.setText("Welcome");<br>
+    }<br>
+    public static void main(String args[]){<br>
+    new AEvent();<br>
+    }<br>
+    }<br>
+</code>
+    <b>2.Java event handling by outer class</b><br>
+<code>
+    import java.awt.*;<br>
+    import java.awt.event.*;<br>
+    class AEvent2 extends Frame{<br>
+    TextField tf;<br>
+    AEvent2(){<br>
+    //create components<br>
+    tf=new TextField();<br>
+    tf.setBounds(60,50,170,20);<br>
+    Button b=new Button("click me");<br>
+    b.setBounds(100,120,80,30);<br>
+    //register listener<br>
+    Outer o=new Outer(this);<br>
+    b.addActionListener(o);//passing outer class instance<br>
+    //add components and set size, layout and visibility<br>
+    add(b);add(tf);<br>
+    setSize(300,300);<br>
+    setLayout(null);<br>
+    setVisible(true);<br>
+    }<br>
+    public static void main(String args[]){<br>
+    new AEvent2();<br>
+    }<br>
+    }<br><br>
+    import java.awt.event.*;<br>
+    class Outer implements ActionListener{<br>
+    AEvent2 obj;<br>
+    Outer(AEvent2 obj){<br>
+    this.obj=obj;<br>
+    }<br>
+    public void actionPerformed(ActionEvent e){<br>
+    obj.tf.setText("welcome");<br>
+    }<br>
+    <br>
+</code>
+    Event Deligation Model
+    ->Java mainly uses the concept of Event Deligation Model.
+    ->At any period of time if the user interacts with the component of GUI the events are generated.
+    ->Events are mainly component specific
+    ->Events are the objects which stores the information about 3 things:-
+    i.What type of event is occured
+    ii.Sources of the events
+    iii.Time of the event
+    Event Deligation:-
+    ->Once the event is generated then the event is passed to the next object should handle or react to that event known as Event Deligation.
+    ->The objects which handles or reacts to an Event is known as "Event Listener".
+    <table border="2">
+        <tbody><tr><th>Sr. No.</th><th>Control &amp; Description</th></tr>
+        <tr><td>2</td><td><p>ActionEvent</p>
+            <p>The ActionEvent is generated when button is clicked or the item of a list is double clicked.</p></td></tr>
+        <tr><td>3</td><td><p>InputEvent</p>
+            <p>The InputEvent class is root event class for all component-level input events.</p></td></tr>
+        <tr><td>4</td><td><p>KeyEvent</p>
+            <p>On entering the character the Key event is generated.</p></td></tr>
+        <tr><td>5</td><td><p>MouseEvent</p>
+            <p>This event indicates a mouse action occurred in a component.</p></td></tr>
+        <tr><td>6</td><td><p>TextEvent</p>
+            <p>The object of this class represents the text events.</p></td></tr>
+        <tr><td>7</td><td><p>WindowEvent</p>
+            <p>The object of this class represents the change in state of a window.</p></td></tr>
+        <tr><td>8</td><td><p>AdjustmentEvent</p>
+            <p>The object of this class represents the adjustment event emitted by Adjustable objects.</p></td></tr>
+        <tr><td>9</td><td><p>ComponentEven</p>
+            <p>The object of this class represents the change in state of a window.</p></td></tr>
+        <tr><td>10</td><td><p>ContainerEvent</p>
+            <p>The object of this class represents the change in state of a window.</p></td></tr>
+        <tr><td>11</td><td><p>MouseMotionEvent</p>
+            <p>The object of this class represents the change in state of a window.</p></td></tr>
+        <tr><td>12</td><td><p>PaintEvent</p>
+            <p>The object of this class represents the change in state of a window.</p></td></tr>
+        </tbody>
+    </table>
+
+</p>
+</head>
+</html>

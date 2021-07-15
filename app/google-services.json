@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "255349359586",
+    "firebase_url": "https://jlearning-71d9a.firebaseio.com",
+    "project_id": "jlearning-71d9a",
+    "storage_bucket": "jlearning-71d9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255349359586:android:d665bd4067dc11d59a2fbb",
+        "android_client_info": {
+          "package_name": "com.example.jlearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255349359586-opqp9b6l7rcf14jqq3v2h3m1imdjh8b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChcIe-pfjJsK_41nDsh_-9gmaC1zfG4vU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255349359586-opqp9b6l7rcf14jqq3v2h3m1imdjh8b5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

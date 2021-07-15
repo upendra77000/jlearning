@@ -1,0 +1,45 @@
+<html>
+<head>
+<p>
+<h3>Exception Handling in Java</h3>
+    The Exception Handling in Java is one of the powerful mechanism to handle the runtime errors so that normal flow of the application can be maintained.<br>
+    Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.<br>
+    Hierarchy of Java Exception classes<br>
+    The java.lang.Throwable class is the root class of Java Exception hierarchy which is inherited by two subclasses: <br>
+    Exception and Error.<br>
+    A hierarchy of Java Exception classes are given below:<br><br>
+    <img src="file:///android_res/drawable/heirarch.jpg" border="2"/>
+<h2>Types of Java Exceptions</h2>
+There are mainly two types of exceptions:<br>
+1.checked<br>
+2.unchecked<br>
+Here, an error is considered as the unchecked exception.<br>
+According to Oracle, there are three types of exceptions:<br>
+1.Checked Exception<br>
+2.Unchecked Exception<br>
+3.Error<br>
+<h2>Difference between Checked and Unchecked Exceptions</h2>
+1) Checked Exception<br>
+The classes which directly inherit Throwable class except RuntimeException and Error are known as checked exceptions<br>
+e.g. IOException, SQLException etc. Checked exceptions are checked at compile-time.<br>
+2) Unchecked Exception<br>
+The classes which inherit RuntimeException are known as unchecked exceptions<br>
+e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc.<br>
+Unchecked exceptions are not checked at compile-time, but they are checked at runtime.<br>
+3) Error<br>
+Error is irrecoverable<br>
+e.g. OutOfMemoryError, VirtualMachineError, AssertionError etc.
+<h2>Java Exception Keywords</h2>
+    There are 5 keywords which are used in handling exceptions in Java.<br>
+    <table border="2">
+        <tbody><tr><th>Keyword</th><th>Description</th></tr>
+        <tr><td>try</td><td>The "try" keyword is used to specify a block where we should place exception code. The try block must be followed by either catch or finally. It means, we can't use try block alone.</td></tr>
+        <tr><td>catch</td><td>The "catch" block is used to handle the exception. It must be preceded by try block which means we can't use catch block alone. It can be followed by finally block later.</td></tr>
+        <tr><td>finally</td><td>The "finally" block is used to execute the important code of the program. It is executed whether an exception is handled or not.</td></tr>
+        <tr><td>throw</td><td>The "throw" keyword is used to throw an exception.</td></tr>
+        <tr><td>throws</td><td>The "throws" keyword is used to declare exceptions. It doesn't throw an exception. It specifies that there may occur an exception in the method. It is always used with method signature.</td></tr>
+        </tbody>
+    </table>
+</p>
+</head>
+</html>

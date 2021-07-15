@@ -1,0 +1,327 @@
+<html>
+<head>
+    <h3>Collection framework</h3>
+    <p>
+    The Collection framework represents a unified architecture for storing and manipulating a group of objects.<br>
+    Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.<br>
+    Java Collection framework provides<br>
+    ->interfaces (Set, List, Queue, Deque)<br>
+    ->classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet)<br>
+    <h2>Hierarchy of Collection Framework</h2>
+    The java.util package contains all the classes and interfaces for the Collection framework.<br>
+    <img src="file:///android_res/drawable/javacollectionhierarchy.png" border="2"/>
+    <h2>Methods of Collection interface</h2>
+    There are many methods declared in the Collection interface.<br>
+    <table border="2">
+        <tbody><tr><th>No.</th><th>Method</th><th>Description</th></tr>
+        <tr><td>1</td><td>public boolean add(E e)</td><td>It is used to insert an element in this collection.</td></tr>
+        <tr><td>2</td><td>public boolean addAll(Collection&lt;? extends E&gt; c)</td><td>It is used to insert the specified collection elements in the invoking collection.</td></tr>
+        <tr><td>3</td><td>public boolean remove(Object element)</td><td>It is used to delete an element from the collection.</td></tr>
+        <tr><td>4</td><td>public boolean removeAll(Collection&lt;?&gt; c)</td><td>It is used to delete all the elements of the specified collection from the invoking collection.</td></tr>
+        <tr><td>5</td><td>default boolean removeIf(Predicate&lt;? super E&gt; filter)</td><td>It is used to delete all the elements of the collection that satisfy the specified predicate.</td></tr>
+        <tr><td>6</td><td>public boolean retainAll(Collection&lt;?&gt; c)</td><td>It is used to delete all the elements of invoking collection except the specified collection.</td></tr>
+        <tr><td>7</td><td>public int size()</td><td>It returns the total number of elements in the collection.</td></tr>
+        <tr><td>8</td><td>public void clear()</td><td>It removes the total number of elements from the collection.</td></tr>
+        <tr><td>9</td><td>public boolean contains(Object element)</td><td>It is used to search an element.</td></tr>
+        <tr><td>10</td><td>public boolean containsAll(Collection&lt;?&gt; c)</td><td>It is used to search the specified collection in the collection.</td></tr>
+        <tr><td>11</td><td>public Iterator iterator()</td><td>It returns an iterator.</td></tr>
+        <tr><td>12</td><td>public Object[] toArray()</td><td>It converts collection into array.</td></tr>
+        <tr><td>13</td><td>public &lt;T&gt; T[]	toArray(T[] a)</td><td>It converts collection into array. Here, the runtime type of the returned array is that of the specified array.</td></tr>
+        <tr><td>14</td><td>public boolean isEmpty()</td><td>It checks if collection is empty.</td></tr>
+        <tr><td>15</td><td>default Stream&lt;E&gt; parallelStream()</td><td>It returns a possibly parallel Stream with the collection as its source.</td></tr>
+        <tr><td>16</td><td>default Stream&lt;E&gt; stream()</td><td>It returns a sequential Stream with the collection as its source.</td></tr>
+        <tr><td>17</td><td>default Spliterator&lt;E&gt; spliterator()</td><td>It generates a Spliterator over the specified elements in the collection.</td></tr>
+        <tr><td>18</td><td>public boolean equals(Object element)</td><td>It matches two collections.</td></tr>
+        <tr><td>19</td><td>public int hashCode()</td><td>It returns the hash code number of the collection.</td></tr>
+        </tbody></table>
+    <h2>Collection Interface</h2>
+    The Collection interface is the interface which is implemented by all the classes in the collection framework.<br>
+    It declares the methods that every collection will have.<br>
+    Some of the methods of Collection interface are<br>
+    ->Boolean add ( Object obj)<br>
+    ->Boolean addAll ( Collection c)<br>
+    ->void clear(), etc.<br>
+    <h3>1.List Interface</h3>
+    List interface is the child interface of Collection interface.<br>
+    It can have duplicate values.<br>
+    List interface is implemented by the classes<br>
+    ->ArrayList<br>
+    ->LinkedList<br>
+    ->Vector<br>
+    ->Stack<br>
+    To instantiate the List interface, we must use :<br>
+    ->List [data-type] list1= new ArrayList();<br>
+    ->List [data-type] list2 = new LinkedList();<br>
+        ->List [data-type] list3 = new Vector();<br>
+            ->List [data-type] list4 = new Stack();<br>
+    <b>i.ArrayList</b><br>
+                ->The ArrayList class implements the List interface.<br>
+                ->It uses a dynamic array to store the duplicate element of different data types.<br>
+                ->The elements stored in the ArrayList class can be randomly accessed.<br>
+                Consider the following example.<br>
+    <code>
+                import java.util.*;<br>
+                class TestJavaCollection1{<br>
+                public static void main(String args[]){<br>
+                ArrayList[String] list=new ArrayList[String]();//Creating arraylist<br>
+                    list.add("Ravi");//Adding object in arraylist<br>
+                    list.add("Vijay");<br>
+                    list.add("Ravi");<br>
+                    list.add("Ajay");<br>
+                    //Traversing list through Iterator<br>
+                    Iterator itr=list.iterator();<br>
+                    while(itr.hasNext()){<br>
+                    System.out.println(itr.next());<br>
+                    }<br>
+                    }<br>
+                    }<br>
+                    Output:<br>
+                    Ravi<br>
+                    Vijay<br>
+                    Ravi<br>
+                    Ajay<br>
+    </code>
+    <b>ii.LinkedList</b><br>
+                    ->LinkedList implements the Collection interface.<br>
+                    ->It uses a doubly linked list internally to store the elements.<br>
+                    ->It can store the duplicate elements.<br>
+                    ->In LinkedList, the manipulation is fast because no shifting is required.<br>
+                    Consider the following example.<br>
+    <code>
+                    import java.util.*;<br>
+                    public class TestJavaCollection2{<br>
+                    public static void main(String args[]){<br>
+                    LinkedList[String] al=new LinkedList[String]();<br>
+                        al.add("Ravi");<br>
+                        al.add("Vijay");<br>
+                        al.add("Ravi");<br>
+                        al.add("Ajay");<br>
+                        Iterator[String] itr=al.iterator();<br>
+                            while(itr.hasNext()){<br>
+                            System.out.println(itr.next());<br>
+                            }<br>
+                            }<br>
+                            }<br>
+                            Output:<br>
+                            Ravi<br>
+                            Vijay<br>
+                            Ravi<br>
+                            Ajay<br>
+    </code>
+    <b>iii.Vector</b><br>
+                            ->Vector uses a dynamic array to store the data elements.<br>
+                            ->It is similar to ArrayList.<br>
+                            Consider the following example.<br>
+    <code>
+                            import java.util.*;<br>
+                            public class TestJavaCollection3{<br>
+                            public static void main(String args[]){<br>
+                            Vector[String] v=new Vector[String]();<br>
+                                v.add("Ayush");<br>
+                                v.add("Amit");<br>
+                                v.add("Ashish");<br>
+                                v.add("Garima");<br>
+                                Iterator[String] itr=v.iterator();<br>
+                                    while(itr.hasNext()){<br>
+                                    System.out.println(itr.next());<br>
+                                    }<br>
+                                    }<br>
+                                    }<br>
+                                    Output:<br>
+                                    Ayush<br>
+                                    Amit<br>
+                                    Ashish<br>
+                                    Garima<br>
+    </code>
+    <b>iv.Stack</b><br>
+                                    The stack is the subclass of Vector.<br>
+                                    It implements the last-in-first-out data structure.<br>
+                                    The stack contains all of the methods of Vector class and also provides its methods like boolean push(), boolean peek(), boolean push(object o), which defines its properties.<br>
+                                    Consider the following example.<br>
+    <code>
+                                    import java.util.*;<br>
+                                    public class TestJavaCollection4{<br>
+                                    public static void main(String args[]){<br>
+                                    Stack[String] stack = new Stack[String]();<br>
+                                        stack.push("Ayush");<br>
+                                        stack.push("Garvit");<br>
+                                        stack.push("Amit");<br>
+                                        stack.push("Ashish");<br>
+                                        stack.push("Garima");<br>
+                                        stack.pop();<br>
+                                        Iterator[String] itr=stack.iterator();<br>
+                                            while(itr.hasNext()){<br>
+                                            System.out.println(itr.next());<br>
+                                            }<br>
+                                            }<br>
+                                            }<br>
+                                            Output:<br>
+                                            Ayush<br>
+                                            Garvit<br>
+                                            Amit<br>
+                                            Ashish<br>
+    </code>
+                                            <h3>2.Queue Interface</h3>
+                                            Queue interface maintains the first-in-first-out order.<br>
+                                            It can be defined as an ordered list that is used to hold the elements which are about to be processed.<br>
+                                            There are various classes which implements the Queue interface.<br>
+                                            ->PriorityQueue<br>
+                                            ->Deque<br>
+                                            ->ArrayDeque<br>
+                                            Queue interface can be instantiated as:<br>
+                                            ->Queue[String] q1 = new PriorityQueue();<br>
+                                                ->Queue[String] q2 = new ArrayDeque();<br>
+    <b>i.PriorityQueue</b><br>
+                                                    ->implements the Queue interface.<br>
+                                                    ->It holds the elements or objects which are to be processed by their priorities.<br>
+                                                    ->PriorityQueue doesn't allow null values to be stored in the queue.<br>
+                                                    Consider the following example.<br>
+    <code>
+                                                    import java.util.*;<br>
+                                                    public class TestJavaCollection5{<br>
+                                                    public static void main(String args[]){<br>
+                                                    PriorityQueue[String] queue=new PriorityQueue[String]();<br>
+                                                        queue.add("Amit Sharma");<br>
+                                                        queue.add("Vijay Raj");<br>
+                                                        queue.add("JaiShankar");<br>
+                                                        queue.add("Raj");<br>
+                                                        System.out.println("head:"+queue.element());<br>
+                                                        System.out.println("head:"+queue.peek());<br>
+                                                        System.out.println("iterating the queue elements:");<br>
+                                                        Iterator itr=queue.iterator();<br>
+                                                        while(itr.hasNext()){<br>
+                                                        System.out.println(itr.next());<br>
+                                                        }<br>
+                                                        queue.remove();<br>
+                                                        queue.poll();<br>
+                                                        System.out.println("after removing two elements:");<br>
+                                                        Iterator<> itr2=queue.iterator();<br>
+                                                            while(itr2.hasNext()){<br>
+                                                            System.out.println(itr2.next());<br>
+                                                            }<br>
+                                                            }<br>
+                                                            }<br>
+                                                            Output:<br>
+                                                            head:Amit Sharma<br>
+                                                            head:Amit Sharma<br>
+                                                            iterating the queue elements:<br>
+                                                            Amit Sharma<br>
+                                                            Raj<br>
+                                                            JaiShankar<br>
+                                                            Vijay Raj<br>
+                                                            after removing two elements:<br>
+                                                            Raj<br>
+                                                            Vijay Raj<br>
+    </code>
+    <b>ii.Deque</b><br>
+                                                            Deque interface extends the Queue interface.<br>
+                                                            In Deque, we can remove and add the elements from both the side.<br>
+                                                            Deque stands for a double-ended queue which enables us to perform the operations at both the ends.<br>
+                                                            Deque can be instantiated as:<br>
+                                                            ->Deque d = new ArrayDeque();<br>
+    <b>iii.Array Deque</b><br>
+                                                            ->ArrayDeque class implements the Deque interface.<br>
+                                                            ->Unlike queue, we can add or delete the elements from both the ends.<br>
+                                                            ->ArrayDeque is faster than ArrayList and Stack and has no capacity restrictions.<br>
+                                                            Consider the following example.<br>
+    <code>
+                                                            import java.util.*;<br>
+                                                            public class TestJavaCollection6{<br>
+                                                            public static void main(String[] args) {<br>
+                                                            //Creating Deque and adding elements<br>
+                                                            Deque[String] deque = new ArrayDeque[String]();<br>
+                                                                deque.add("Gautam");<br>
+                                                                deque.add("Karan");<br>
+                                                                deque.add("Ajay");<br>
+                                                                //Traversing elements<br>
+                                                                for (String str : deque) {<br>
+                                                                System.out.println(str);<br>
+                                                                }<br>
+                                                                }<br>
+                                                                }<br>
+                                                                Output:<br>
+                                                                Gautam<br>
+                                                                Karan<br>
+                                                                Ajay<br>
+    </code>
+    <h3>Set Interface</h3>
+    ->Set Interface in Java is present in java.util package.<br>
+    ->It extends the Collection interface.<br>
+    ->set uses "Unordered List" which doesn't contains duplicate elements.<br>
+    Set is implemented by<br>
+    ->HashSet<br>
+    ->LinkedHashSet<br>
+    ->TreeSet<br>
+    Set can be instantiated as:<br>
+    ->Set[data-type] s1 = new HashSet[data-type]();<br>
+    ->Set[data-type] s2 = new LinkedHashSet[data-type]();<br>
+        ->Set[data-type] s3 = new TreeSet[data-type]();<br>
+            StringTokenizer<br>
+            The java.util.StringTokenizer class allows you to break a string into tokens.<br>
+            Methods of StringTokenizer class<br>
+            The 6 useful methods of StringTokenizer class are as follows:<br>
+    <table class="alt">
+        <tbody><tr><th>Public method</th><th>Description</th></tr>
+        <tr><td>boolean hasMoreTokens()</td><td>checks if there is more tokens available.</td></tr>
+        <tr><td>String nextToken()</td><td>returns the next token from the StringTokenizer object.</td></tr>
+        <tr><td>String nextToken(String delim)</td><td>returns the next token based on the delimeter.</td></tr>
+        <tr><td>boolean hasMoreElements()</td><td> same as hasMoreTokens() method.</td></tr>
+        <tr><td>Object nextElement()</td><td> same as nextToken() but its return type is Object.</td></tr>
+        <tr><td>int countTokens()</td><td>returns the total number of tokens.</td></tr>
+        </tbody>
+    </table>
+    <b>Simple example of StringTokenizer class</b>
+    ->Removing blank spaces<br>
+    <code>
+    import java.util.StringTokenizer;<br>
+    public class Simple{<br>
+    public static void main(String args[]){<br>
+    StringTokenizer st = new StringTokenizer("my name is khan"," ");<br>
+    while (st.hasMoreTokens()) {<br>
+    System.out.println(st.nextToken());<br>
+    }<br>
+    }<br>
+    }<br>
+    Output:<br>
+        my<br>
+    name<br>
+    is<br>
+    khan<br>
+    </code>
+    <h3>Java Collections enumeration() Method</h3>
+    The enumeration() is a method of Java Collections class which is used to get the enumeration over the specified collection.<br>
+    Syntax:-<br>
+    ->public static [T] Eenumeration[T] enumeration(Collection[T] c)<br>
+    Example:-<br>
+    <code>
+    import java.util.*;<br>
+    public class CollectionsEnumerationExample1 {<br>
+    public static void main(String[] args) {<br>
+    Vector[String] Enum = new Vector[String]();<br>
+        Enum.add("JAVA");<br>
+        Enum.add("JSP");<br>
+        Enum.add("SERVLET");<br>
+        Enum.add("C");<br>
+        Enum.add("PHP");<br>
+        Enum.add("PERL");<br>
+        //Create Enumeration<br>
+        Enumeration[String] en = Collections.enumeration(Enum);<br>
+            System.out.println("The Enumeration List are: ");<br>
+            while(en.hasMoreElements()){<br>
+            System.out.println(en.nextElement());<br>
+            }<br>
+            }<br>
+            }<br>
+            Output:<br>
+            The Enumeration List are:<br>
+            JAVA<br>
+            JSP<br>
+            SERVLET<br>
+            C<br>
+            PHP<br>
+            PERL<br>
+    </code>
+            </p>
+
+</head>
+</html>
